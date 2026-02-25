@@ -1,92 +1,132 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한국외대 캠퍼스 통합 맛집 지도</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-color: #142B40; /* 배경을 #142B40으로 변경 */
-            color: #FFF; /* 기본 글자색은 흰색 */
-        }
-        h1 {
-            margin-bottom: 5px;
-            color: #A67B56; /* 제목 색상 변경 */
-            font-size: 2em; /* 제목 크기 */
-        }
-        .dev {
-            margin-bottom: 5px;
-            color: #A67B56; /* 제목 색상 변경 */
-            font-size: 2em; /* 제목 크기 */
-        }
-        .dev3 {
-            color: #A67B56; /* 제목 색상 변경 */
-            font-size: 1em; /* 제목 크기 */
-        }
-        .subtitle-main {
-            color: #A67B56;
-            font-size: 1em; /* 제목보다 작게 */
-            margin-bottom: 5px;
-        }
-        .subtitle2 {
-            color:  #A67B56; 
-            font-size: 0.5em; /* 글자 크기를 절반으로 줄임 */
-        }
-        .subtitle3 {
-            color:  white; 
-            font-size: 1em; /* 글자 크기를 절반으로 줄임 */
-            
-            text-align: left; /* 왼쪽 정렬 */
-        }
-        /* SlowMan 스타일 */
-        .developer-name {
-            font-size: 2em; /* 글자 크기 2배 */
-            color: white;
-            text-align: left; /* 왼쪽 정렬 */
-        }
-        /* Contact & 메인 버튼 스타일 */
-        
-        .small-button2 {
-            padding: 14px 30px; /* 기존 크기의 절반으로 */
-            font-size: 18px;
-            color: white; /* 글자색을 흰색으로 */
-            background-color: #A67B56; /* 배경을 원래 색으로 */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block; /* 버튼 정렬 */
-            margin-top: 10px;
-        }
-        .small-button2:hover {
-            background-color: #8B5E3C;
-        }
-       
-       
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개발자 정보 | 한국외대 맛집 지도</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/common.css">
+  <script src="js/restaurant-utils.js" defer></script>
+  <style>
+    .developer-section {
+      padding: 3rem 1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .developer-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 2px solid var(--hufs-gold);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .developer-name {
+      color: var(--hufs-gold);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .developer-info {
+      color: var(--hufs-white);
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .developer-info strong {
+      color: var(--hufs-gold);
+    }
+
+    .contact-section {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .contact-message {
+      color: var(--hufs-silver);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-button {
+      margin-top: 3rem;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>한국외대 맛집 지도</h1>
-    <hr>
-    <p class="subtitle-main">HUFS Restaurant Guide Map</p>
-    
-    <br>
+  <!-- 헤더 -->
+  <header class="header">
+    <a href="맛집외대통합3탄.html" class="header-logo">
+      <img src="외대로고.jpeg" alt="한국외대 로고" loading="lazy" style="height:40px;width:auto">
+      <span class="header-title">개발자 정보</span>
+    </a>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="맛집외대통합3탄.html">홈</a></li>
+        <li><a href="랜덤메뉴.html">랜덤 메뉴</a></li>
+        <li><a href="맛집서울캠5탄_지도확대.html">서울캠</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <p class="dev">Developer</p>
-    <!-- SlowMan (개발자명) -->
-    <p class="developer-name">▷ SlowMan</p>
-    <p class="subtitle3">: 한국외국어대학교 수학과 22학번</p>
+  <!-- 메인 컨텐츠 -->
+  <main class="main-container">
+    <section class="developer-section">
+      <h1 class="text-gold">👨‍💻 Developer</h1>
 
-    <!-- Contact 버튼 -->
-    <a href="https://open.kakao.com/o/sdpf2cih" class="small-button2">Contact</a>
-    
-    <p class="dev3">맛집 데이터 수정 문의 환영합니다.</p>
+      <div class="developer-card">
+        <div class="developer-name">SlowMan</div>
+        <div class="developer-info">
+          <strong>한국외국어대학교</strong><br>
+          수학과 22학번
+        </div>
+        <div class="developer-name">MintPansy</div>
+        <div class="developer-info">
+          <strong>한국외국어대학교</strong><br>
+          통계학과 22학번
+        </div>
 
-    <!-- 메인으로 가는 버튼 -->
-    <a href="https://hufs-restaurant.github.io/slowman/%EB%A7%9B%EC%A7%91%EC%99%B8%EB%8C%80%ED%86%B5%ED%95%A93%ED%83%84.html" class="small-button2">Back</a>
+        <div class="contact-section">
+          <p class="contact-message">
+            맛집 데이터 수정 문의를 환영합니다!<br>
+            오류나 개선 사항이 있으면 언제든지 연락주세요.
+          </p>
+          <a href="https://open.kakao.com/o/sdpf2cih" class="btn btn-gold" target="_blank">
+            💬 카카오톡 오픈채팅
+          </a>
+        </div>
+      </div>
 
+      <div class="back-button">
+        <a href="맛집외대통합3탄.html" class="btn btn-secondary">🏠 홈으로 돌아가기</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="footer-text">
+      <p>한국외국어대학교 맛집 가이드</p>
+      <p>개발자: SlowMan (수학과 22학번)</p>
+      <p>개발자: MintPansy (통계학과 22학번)</p>
+    </div>
+    <div class="footer-links">
+      <a href="맛집외대통합3탄.html">홈으로</a>
+      <a href="랜덤메뉴.html">랜덤 메뉴</a>
+      <a href="https://open.kakao.com/o/sdpf2cih" target="_blank">문의하기</a>
+    </div>
+  </footer>
 </body>
+
 </html>
